@@ -1,0 +1,4 @@
+rootProject.name = 'open-platform'
+
+// Include modules
+include "modules:program"

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+
+    <grid name="program-grid" title="Programmes" model = "com.axelor.program.db.Program">
+        <field name="status" title="Statut"/>
+        <field name="title" title="Intitulé du programme"/>
+        <field name="program_number" title="Numéro"/>
+        <field name = "address" title="Adresse"/>
+        <field name="zip_code" title ="Code Postal"/>
+        <field name="city" title="Ville"/>
+    </grid>
+
+    <form name="program-form" title="Nouveau Programme"
+          model="com.axelor.program.db.Program">
+        <panel title="Suivi" colSpan="2">
+            <button onClick="action-next-program" title="Hello test" name="next"/>
+            <field name="status" title="Statut"/>
+        </panel>
+        <panel title="Intitulé du programme" colSpan="2">
+            <field name="title" title="Intitulé du programme"/>
+            <field name="program_number" title="Numéro"/>
+            <field name = "address" title="Adresse"/>
+            <field name="zip_code" title ="Code Postal"/>
+            <field name="city" title="Ville"/>
+        </panel>
+        <panel-tabs >
+            <panel title="Programme" name="program" colSpan="2">
+                <field name="title" title="Intitulé du programme"/>
+                <!--spacer -->
+                <field name="" title=""/>
+                <field name="name" title = "Nom du programme"/>
+            </panel>
+            <panel title="Étude financement" name="financing" colSpan="2">
+                <field name="internal_interlocutors" title="Interlocuteurs internes"/>
+                <!--spacer -->
+                <field name="" title=""/>
+                <field name="interlocutor_1" title="Interlocuteur 1"/>
+                <field name="interlocutor_2" title="Interlocuteur 2"/>
+
+                <field name="" title="Code INSEE"/>
+                <!--spacer -->
+                <field name="" title=""/>
+            </panel>
+            <panel title="Acquisition" name="acquisition" colSpan="2">
+                <field name="internal_interlocutors" title="Interlocuteurs internes"/>
+                <field name="interlocutor_1" title="Interlocuteur 1"/>
+                <field name="interlocutor_2" title="Interlocuteur 2"/>
+            </panel>
+        </panel-tabs>
+    </form>
+
+    <action-method name="action-next-program">
+        <call class="com.axelor.program.web.HelloController" method="hello"/>
+    </action-method>
+
+</object-views>

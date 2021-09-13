@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+    <module name="program" package="com.axelor.program.db"/>
+
+    <entity name="Program" sequential="true" cacheable="true">
+        <string name="status" required="true" />
+        <string name="title" required="true" />
+        <integer name="id"/>
+        <string name="address"/>
+        <integer name="zip_code"/>
+        <string name="city"/>
+        <string name="name"/>
+        <string name="local_urbanism_plan"/>
+        <string name="land_register_references"/>
+        <string name="internal_interlocutor"/>
+        <string name="interlocutor_1"/>
+        <string name="interlocutor_2"/>
+        <string name="program_description"/>
+        <integer name="surface"/>
+        <integer name="housing_units"/>
+        <integer name="parking_units"/>
+        <string name="activity_space"/>
+        <string name="housing_type"/>
+        <string name="community_of_communes"/>
+        <string name="operation_nature"/>
+        <string name="typology"/>
+        <string name="t1_units_number"/>
+        <string name="t2_units_number"/>
+        <string name="t3_units_number"/>
+        <string name="t4_units_number"/>
+        <string name="t5_units_number"/>
+        <integer name="underground_parking_units"/>
+        <integer name="aerial_vehicle_parking_units"/>
+        <string name="vendors"/>
+        <boolean name="business_provider"/>
+        <one-to-many name="business_provider"/>
+
+    </entity>
+</domain-models>
