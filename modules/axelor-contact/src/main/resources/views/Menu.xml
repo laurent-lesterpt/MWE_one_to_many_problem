@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+    <menuitem name="menu-contact-book"
+              title="Address Book" />
+
+    <menuitem name="menu-contact-friends"
+              parent="menu-contact-book"
+              title="All Contact"
+              action="contact.all"/>
+
+    <menuitem name="menu-test-one-to-many"
+              parent="menu-contact-book"
+              title="All Test One To Many"
+              action="test.all"/>
+
+    <action-view name="contact.all"
+                 title="Contacts"
+                 model="com.axelor.contact.db.Contact">
+        <view type="grid" name="contact-grid"/>
+        <view type="form" name="contact-form"/>
+    </action-view>
+
+    <action-view name="test.all"
+                 title="OneToMany"
+                 model="com.axelor.contact.db.TestOneToMany">
+        <view type="form" name="test-one-to-many-form"/>
+    </action-view>
+
+</object-views>

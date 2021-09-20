@@ -4,9 +4,11 @@
                xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
   http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
 
-    <module name="program" package="com.axelor.program.db"/>
+    <module name="contact" package="com.axelor.contact.db"/>
 
-    <entity name="Program" sequential="true" cacheable="true">
-        <one-to-many name="business_provider" ref="com.axelor.contact.db.Contact" mappedBy="program"/>
+    <entity name="Title">
+        <string name="code" required="true" unique="true" min="2" />
+        <string name="name" required="true" unique="true" min="2" />
     </entity>
+
 </domain-models>
